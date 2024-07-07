@@ -19,7 +19,7 @@ protocol SwipeCardsDelegate {
     func swipeDidEnd(on view: TinderCardView)
 }
 
-class TinderCardView : UIView {
+class TinderCardView : UIView{
    
     //MARK: - Properties
     var swipeView : UIView!
@@ -30,12 +30,13 @@ class TinderCardView : UIView {
             swipeView.backgroundColor = dataSource?.bgColor
         }
     }
+
     
     //MARK: - Init
-     override init(frame: CGRect) {
+    init(index: Int) {
         super.init(frame: .zero)
         
-        configureSwipeView()
+        configureSwipeView(index: index)
         addPanGestureOnCards()
     }
     
@@ -45,7 +46,7 @@ class TinderCardView : UIView {
     
     //MARK: - Configuration
     
-    func configureSwipeView() {
+    func configureSwipeView(index: Int) {
         swipeView = UIView()
         swipeView.layer.cornerRadius = 15
         swipeView.clipsToBounds = true
@@ -56,6 +57,11 @@ class TinderCardView : UIView {
         swipeView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         swipeView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         swipeView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        
+        let image = UIImage(named: "img_0" + "\(index)")
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 100, y: 80, width: 170, height: 170)
+        addSubview(imageView)
     }
 
     

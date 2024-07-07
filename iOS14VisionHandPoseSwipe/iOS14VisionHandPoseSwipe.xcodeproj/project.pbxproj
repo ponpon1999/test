@@ -16,6 +16,9 @@
 		1E98BBC225822888005E7AAA /* TinderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98BBC125822888005E7AAA /* TinderCardView.swift */; };
 		1E98BBC5258228BB005E7AAA /* StackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E98BBC4258228BB005E7AAA /* StackContainerView.swift */; };
 		1EF40FD32588F02200988435 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF40FD22588F02200988435 /* CameraView.swift */; };
+		58E4F6F92BEF5FB700FBB66B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E4F6F82BEF5FB700FBB66B /* CardView.swift */; };
+		58E4F6FB2BEF5FDE00FBB66B /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E4F6FA2BEF5FDE00FBB66B /* CardItem.swift */; };
+		58E4F6FD2BEF619400FBB66B /* ImageCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E4F6FC2BEF619400FBB66B /* ImageCardItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		1E98BBC125822888005E7AAA /* TinderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderCardView.swift; sourceTree = "<group>"; };
 		1E98BBC4258228BB005E7AAA /* StackContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackContainerView.swift; sourceTree = "<group>"; };
 		1EF40FD22588F02200988435 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		58E4F6F82BEF5FB700FBB66B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		58E4F6FA2BEF5FDE00FBB66B /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		58E4F6FC2BEF619400FBB66B /* ImageCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCardItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		1E98BBAB25822852005E7AAA /* iOS14VisionHandPoseSwipe */ = {
 			isa = PBXGroup;
 			children = (
+				58E4F6F52BEF5F2600FBB66B /* Add */,
 				1E98BBAC25822852005E7AAA /* AppDelegate.swift */,
 				1E98BBAE25822852005E7AAA /* SceneDelegate.swift */,
 				1E98BBB025822852005E7AAA /* ViewController.swift */,
@@ -69,11 +76,21 @@
 				1E98BBB525822855005E7AAA /* Assets.xcassets */,
 				1E98BBB725822855005E7AAA /* LaunchScreen.storyboard */,
 				1E98BBBA25822855005E7AAA /* Info.plist */,
-				1E98BBC125822888005E7AAA /* TinderCardView.swift */,
 				1E98BBC4258228BB005E7AAA /* StackContainerView.swift */,
+				1E98BBC125822888005E7AAA /* TinderCardView.swift */,
 				1EF40FD22588F02200988435 /* CameraView.swift */,
 			);
 			path = iOS14VisionHandPoseSwipe;
+			sourceTree = "<group>";
+		};
+		58E4F6F52BEF5F2600FBB66B /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				58E4F6F82BEF5FB700FBB66B /* CardView.swift */,
+				58E4F6FA2BEF5FDE00FBB66B /* CardItem.swift */,
+				58E4F6FC2BEF619400FBB66B /* ImageCardItem.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,7 +167,10 @@
 				1E98BBAD25822852005E7AAA /* AppDelegate.swift in Sources */,
 				1E98BBC225822888005E7AAA /* TinderCardView.swift in Sources */,
 				1EF40FD32588F02200988435 /* CameraView.swift in Sources */,
+				58E4F6FB2BEF5FDE00FBB66B /* CardItem.swift in Sources */,
 				1E98BBC5258228BB005E7AAA /* StackContainerView.swift in Sources */,
+				58E4F6FD2BEF619400FBB66B /* ImageCardItem.swift in Sources */,
+				58E4F6F92BEF5FB700FBB66B /* CardView.swift in Sources */,
 				1E98BBAF25822852005E7AAA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,13 +319,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6DD4SSXJM7;
+				DEVELOPMENT_TEAM = GLYSD6X3M8;
 				INFOPLIST_FILE = iOS14VisionHandPoseSwipe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iowncode.com.iOS14VisionHandPoseSwipe;
+				PRODUCT_BUNDLE_IDENTIFIER = iOS14VisionHandPoseSwipe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -318,13 +338,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6DD4SSXJM7;
+				DEVELOPMENT_TEAM = GLYSD6X3M8;
 				INFOPLIST_FILE = iOS14VisionHandPoseSwipe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = iowncode.com.iOS14VisionHandPoseSwipe;
+				PRODUCT_BUNDLE_IDENTIFIER = iOS14VisionHandPoseSwipe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

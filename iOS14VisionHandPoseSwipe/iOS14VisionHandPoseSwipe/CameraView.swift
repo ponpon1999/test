@@ -11,6 +11,7 @@ import AVFoundation
 class CameraView: UIView {
 
     private var overlayThumbLayer = CAShapeLayer()
+    private var overlayindexLayer = CAShapeLayer()
 
     var previewLayer: AVCaptureVideoPreviewLayer {
         return layer as! AVCaptureVideoPreviewLayer
@@ -34,11 +35,13 @@ class CameraView: UIView {
         super.layoutSublayers(of: layer)
         if layer == previewLayer {
             overlayThumbLayer.frame = layer.bounds
+            overlayindexLayer.frame = layer.bounds//0505
         }
     }
 
     private func setupOverlay() {
         previewLayer.addSublayer(overlayThumbLayer)
+        previewLayer.addSublayer(overlayindexLayer)
     }
     
     func showPoints(_ points: [CGPoint]) {
@@ -49,8 +52,12 @@ class CameraView: UIView {
             return
         }
         
-        let thumbColor = UIColor.green
-        drawFinger(overlayThumbLayer, Array(points[0...1]), thumbColor, wrist)
+        let thumbColor = UIColor.white
+        drawFinger(overlayThumbLayer, Array(points[0...5]), thumbColor, wrist)
+        drawFinger(overlayThumbLayer, Array(points[0...5]), thumbColor, wrist)
+        drawFinger(overlayThumbLayer, Array(points[0...5]), thumbColor, wrist)
+        drawFinger(overlayThumbLayer, Array(points[0...5]), thumbColor, wrist)
+        drawFinger(overlayThumbLayer, Array(points[0...5]), thumbColor, wrist)
     }
     
     func drawFinger(_ layer: CAShapeLayer, _ points: [CGPoint], _ color: UIColor, _ wrist: CGPoint) {
@@ -63,6 +70,16 @@ class CameraView: UIView {
         
         fingerPath.move(to: points[0])
         fingerPath.addLine(to: points[points.count - 1])
+        fingerPath.move(to: points[1])
+        fingerPath.addLine(to: points[points.count - 1])
+        fingerPath.move(to: points[2])
+        fingerPath.addLine(to: points[points.count - 1])
+        fingerPath.move(to: points[3])
+        fingerPath.addLine(to: points[points.count - 1])
+        fingerPath.move(to: points[4])
+        fingerPath.addLine(to: points[points.count - 1])
+//        fingerPath.move(to: points[0])
+//        fingerPath.addLine(to: points[points.count - 1])
         
         layer.fillColor = color.cgColor
         layer.strokeColor = color.cgColor

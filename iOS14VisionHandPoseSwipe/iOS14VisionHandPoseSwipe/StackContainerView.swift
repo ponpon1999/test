@@ -64,12 +64,13 @@ class StackContainerView: UIView, SwipeCardsDelegate {
     //MARK: - Configurations
     private func addCardView(cardView: TinderCardView, atIndex index: Int) {
         cardView.delegate = self
-        addCardFrame(index: index, cardView: cardView)
+        addCardFrame(index: index, cardView: cardView)//0505
         cardViews.append(cardView)
         insertSubview(cardView, at: 0)
         remainingcards -= 1
     }
     
+//    0505
     func addCardFrame(index: Int, cardView: TinderCardView) {
         var cardViewFrame = bounds
         let horizontalInset = (CGFloat(index) * self.horizontalInset)
@@ -99,7 +100,7 @@ class StackContainerView: UIView, SwipeCardsDelegate {
             for (cardIndex, cardView) in visibleCards.reversed().enumerated() {
                 UIView.animate(withDuration: 0.2, animations: {
                 cardView.center = self.center
-                  self.addCardFrame(index: cardIndex, cardView: cardView)
+                  self.addCardFrame(index: cardIndex, cardView: cardView)//0505
                     self.layoutIfNeeded()
                 })
             }
@@ -108,7 +109,7 @@ class StackContainerView: UIView, SwipeCardsDelegate {
             for (cardIndex, cardView) in visibleCards.reversed().enumerated() {
                 UIView.animate(withDuration: 0.2, animations: {
                     cardView.center = self.center
-                    self.addCardFrame(index: cardIndex, cardView: cardView)
+                    self.addCardFrame(index: cardIndex, cardView: cardView)//0505
                     self.layoutIfNeeded()
                 })
             }
